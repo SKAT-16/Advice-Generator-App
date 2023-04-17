@@ -1,0 +1,79 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope&display=swap");
+body {
+  background-color: hsl(218, 23%, 16%);
+  font-family: "Manrope", sans-serif;
+}
+
+.main {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: grid;
+}
+
+.advice-section {
+  background-color: hsl(217, 19%, 24%);
+  border-radius: 10px;
+  padding: 15px 0 70px;
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.advice-section .advice-count {
+  color: hsl(150, 100%, 66%);
+  letter-spacing: 5px;
+  margin-bottom: 0;
+}
+.advice-section .advice-text {
+  color: hsl(193, 38%, 86%);
+  font-weight: 800;
+  font-size: 28px;
+  line-height: 1.5;
+  width: 30ch;
+}
+.advice-section img {
+  width: 80%;
+  margin-top: 20px;
+}
+
+.dice-btn {
+  background-color: hsl(150, 100%, 66%);
+  border-radius: 50%;
+  padding: 15px;
+  margin: -30px auto;
+}
+
+.disabled-state {
+  animation: rotateBtn infinite ease-in-out 0.5s alternate;
+  cursor: not-allowed;
+}
+
+@keyframes rotateBtn {
+  to {
+    box-shadow: 0 0 50px 1px hsl(150, 100%, 66%);
+    transform: scale(1.1) rotateZ(360deg);
+  }
+}
+@media screen and (max-width: 700px) {
+  .advice-section {
+    padding-bottom: 50px;
+    width: 400px;
+  }
+  .advice-section .advice-text {
+    font-size: 20px;
+    width: 25ch;
+  }
+}
+@media screen and (max-width: 450px) {
+  .advice-section {
+    padding-bottom: 50px;
+    width: 300px;
+  }
+  .advice-section .advice-text {
+    font-size: 15px;
+    width: 25ch;
+  }
+}
